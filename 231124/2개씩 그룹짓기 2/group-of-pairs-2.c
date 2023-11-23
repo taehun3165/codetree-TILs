@@ -9,6 +9,7 @@ int main() {
     for(i=0;i<2*n;i++){
         scanf("%d",&li[i]);
     }
+
     for(i=0;i<2*n-1;i++){
         for(j=i+1;j<n*2;j++){
             if(li[i]>li[j]){
@@ -18,13 +19,11 @@ int main() {
             }
         }
     }
+
     for(i=0;i<n;i++){
-        if(li[i]>li[i+n]){
-            if(li[i]-li[i+n]<min)min=li[i]-li[i+n];
-        }
-        else{
-            if(li[i+n]-li[i]<min)min=li[i+n]-li[i];
-        }
+        if(li[i]-li[i+n]<min&&li[i]-li[i+n]>0)min=li[i]-li[i+n];
+        else if(li[i+n]-li[i]<min&&li[i+n]-li[i]>0)min=li[i+n]-li[i];
+        
     }
     printf("%d",min);
 
