@@ -34,7 +34,12 @@ int main() {
                 }
             }
             for(i=m;i<n;i++){
-                if(li[0]>li[i]){
+                if(li[0]==1&&li[i]==2){
+                    m=i-1;
+                    f=i-1;
+                    break;
+                }
+                else if(li[0]>li[i]){
                     m=i;
                     f=i;
                 }
