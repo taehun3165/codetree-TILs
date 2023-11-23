@@ -27,19 +27,19 @@ int main() {
             }
             if(x==0)break;
 
-
-            for(i=1;i<n;i++){
+            for(i=1;i<n-1;i++){
+                if(li[i]>li[1+i]){
+                    m=i;
+                    f=i;
+                }
+            }
+            for(i=m;i<n;i++){
                 if(li[0]>li[i]){
                     m=i;
                     f=i;
                 }
             }
-            for(i=m;i<n-1;i++){
-                if(li[i]+1!=li[1+i]){
-                    f=i;
-
-                }
-            }
+            
             t=li[0];
             for(i=1;i<=f;i++){
                 li[i-1]=li[i];
