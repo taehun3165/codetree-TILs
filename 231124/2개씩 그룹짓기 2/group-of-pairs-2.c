@@ -27,8 +27,6 @@ int main() {
     }
 
     printf("%d", min);
-
-    // 동적으로 할당된 배열 메모리 해제
     free(arr);
 
     return 0;
