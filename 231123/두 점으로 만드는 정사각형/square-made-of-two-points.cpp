@@ -7,10 +7,10 @@ int main() {
         scanf("%d %d",&x[i],&y[i]);
     }
     for(i=0;i<4;i++){
-        if(x[i]<xmin)xmin=x;
-        if(x[i]>xmax)xmax=x;
-        if(y[i]<xmin)xmin=x;
-        if(y[i]>xmax)xmax=x;
+        if(x[i]<xmin)xmin=x[i];
+        if(x[i]>xmax)xmax=x[i];
+        if(y[i]<ymin)ymin=y[i];
+        if(y[i]>ymax)ymax=y[i];
     }
     if(xmax-xmin>ymax-ymin)f=xmax-xmin;
     else f=ymax-ymin;
