@@ -42,7 +42,6 @@ int main() {
                 li[i-1]=li[i];
             }
             li[m]=t;
-            printf("%d %d %d %d\n",li[0],li[1],li[2],li[3]);
             c++;
         }
     }
