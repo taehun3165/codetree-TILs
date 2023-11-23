@@ -11,7 +11,7 @@ int main() {
     for(i=0;i<n;i++){
         if(li[i]==1){
             c++;
-            for(j=i;j<=i+m*2+1;j++){
+            for(j=i;j<i+m*2+1;j++){
                 if(j==n)break;
                 li[j]=0;
             }
