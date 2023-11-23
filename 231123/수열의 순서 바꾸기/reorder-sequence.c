@@ -28,7 +28,7 @@ int main() {
             if(x==0)break;
             min=100;
             for(i=2;i<n;i++){
-                if(1<=li[i]-li[0]&&min>li[i]-li[0]){
+                if(li[i]>li[0]){
                     min=li[i]-li[0];
                     m=i-1;
                 }
