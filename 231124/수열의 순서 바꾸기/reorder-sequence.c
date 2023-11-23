@@ -20,7 +20,6 @@ int main() {
         while(1){
             for(i=0;i<n-1;i++){
                 if(li[i]+1!=li[i+1]){
-                    if(c==45)printf("%d %d ",li[i],li[i+1]);
                     break;
                     }
                 else if (i==n-2){
