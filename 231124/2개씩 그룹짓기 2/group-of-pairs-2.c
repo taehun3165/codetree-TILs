@@ -1,31 +1,35 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 
+int compare(const void *a, const void *b) {
+    return (*(int *)a - *(int *)b);
+}
 
 int main() {
-    // 여기에 코드를 작성해주세요.
-    int i,j,n,li[200000]={'\0'},t,min=1000000000;
-    scanf("%d",&n);
-    for(i=0;i<2*n;i++){
-        scanf("%d",&li[i]);
+    int n;
+    scanf("%d", &n);
+
+    int *arr = (int *)malloc(2 * n * sizeof(int));
+
+    for (int i = 0; i < 2 * n; i++) {
+        scanf("%d", &arr[i]);
     }
 
-    for(i=0;i<2*n-1;i++){
-        for(j=i+1;j<n*2;j++){
-            if(li[i]>li[j]){
-                t=li[i];
-                li[i]=li[j];
-                li[j]=t;
-            }
+    qsort(arr, 2 * n, sizeof(int), compare);
+
+    int min = 1000000000;
+    for (int i = 0; i < n; i++) {
+        int diff = abs(arr[i] - arr[i + n]);
+        if (diff < min) {
+            min = diff;
         }
     }
 
-    for(i=0;i<n;i++){
-        if(li[i]-li[i+n]<min&&li[i]-li[i+n]>0)min=li[i]-li[i+n];
-        else if(li[i+n]-li[i]<min&&li[i+n]-li[i]>0)min=li[i+n]-li[i];
-        
-    }
-    printf("%d",min);
+    printf("%d", min);
+
+    // 동적으로 할당된 배열 메모리 해제
+    free(arr);
 
     return 0;
 }
