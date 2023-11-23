@@ -3,7 +3,7 @@
 
 int main() {
     // 여기에 코드를 작성해주세요.
-    int n,li[100]={'\0'},i,t,m,x=1,c=0,min=100;
+    int n,li[100]={'\0'},i,t,m,x=1,c=0;
     scanf("%d",&n);
     for(i=0;i<n;i++){
         scanf("%d",&li[i]);
@@ -26,13 +26,11 @@ int main() {
                 }
             }
             if(x==0)break;
-            min=100;
-            for(i=2;i<n;i++){
-                if(li[i]<li[0]){
-                    min=1;
-                    m=i;
+            for(i=1;i<n;i++){
+                if(li[i-1]+1!=li[i]){
+                    m=i-1;
                 }
-                else if(i+1==n&&min==100){
+                else if(i+1==n&&li[i]<li[0]){
                     m=i;
                     break;
                 }
