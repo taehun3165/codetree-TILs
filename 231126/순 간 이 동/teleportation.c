@@ -13,6 +13,9 @@ int main() {
     if(min>b-y+x-a&& b-y>0 && x-a>0)min=b-x+y-a;
     if(min>y-a+b-x&& y-a>0 && b-x>0)min=x-a+b-y;
     if(min>y-b+a-x&& y-b>0 && a-x>0)min=y-a+b-x;
+
+    if(min>a-b&&a-b>0)min=a-b;
+    if(min>b-a&&b-a>0)min=b-a;
     printf("%d",min);
     return 0;
 }
