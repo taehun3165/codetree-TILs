@@ -2,11 +2,11 @@
 
 int main() {
     // 여기에 코드를 작성해주세요.
-    int a,b,c=0,n,t;
+    int a,b,c=0,n=0,t;
     scanf("%d %d %d",&a,&b,&c);
     while(1){
         if(a+1==b&&b+1==c)break;
-        else if(a-b>b-a){
+        else if(c-b>b-a){
             a=c-1;
             t=a;
             a=b;
@@ -18,8 +18,8 @@ int main() {
             b=c;
             c=t;
         }
-        c++;
+        n++;
     }
-    printf("%d",c);
+    printf("%d",n);
     return 0;
 }
