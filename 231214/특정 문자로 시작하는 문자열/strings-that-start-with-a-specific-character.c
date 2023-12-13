@@ -6,19 +6,18 @@ int main() {
     char c[23][23], c1;
     scanf("%d", &n);
 
-    // 비워진 버퍼를 정리하기 위해 추가된 코드
-    while (getchar() != '\n');
-
     for (int i = 0; i < n; i++) {
         scanf("%s ", c[i]);
-        h += strlen(c[i]);
     }
 
     scanf("%c ", &c1);
     for (int i = 0; i < n; i++) {
-        if (c[i][0] == c1) co++;
+        if (c[i][0] == c1){ 
+            co++;
+            h += strlen(c[i]);
+        }
     }
 
-    printf("%d %.0f.00", co, (float)h / n);
+    printf("%d %.2f", co, (float)h / co);
     return 0;
 }
