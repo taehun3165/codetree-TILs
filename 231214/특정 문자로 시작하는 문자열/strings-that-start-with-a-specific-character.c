@@ -19,6 +19,6 @@ int main() {
         if (c[i][0] == c1) co++;
     }
 
-    printf("%.0f %.0f.00", (float)co, (float)h / n);
+    printf("%d %.0f.00", co, (float)h / n);
     return 0;
 }
