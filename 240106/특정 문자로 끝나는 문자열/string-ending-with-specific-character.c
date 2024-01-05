@@ -11,8 +11,10 @@ int main() {
     for(i=0;i<10;i++){
         for(l=0;l<20;l++){
             if(w[i][l+1]=='\0'){
-                if(w[i][l]==h)printf("%s\n",w[i]);
-                c++;
+                if(w[i][l]==h){
+                    printf("%s\n",w[i]);
+                    c++;
+                }
                 break;
             }
         }
