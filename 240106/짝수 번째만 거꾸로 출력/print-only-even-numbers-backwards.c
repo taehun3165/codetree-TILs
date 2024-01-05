@@ -7,9 +7,8 @@ int main() {
     char w[101];
     scanf("%s",w);
     len=strlen(w);
-    if(len%2==0)hol++;
-    for(i=len;i>=0;i--){
-        if((i+hol)%2==0)printf("%c",w[i]);
+    for(i=len-1;i>=0;i--){
+        if((i+1)%2==0)printf("%c",w[i]);
     }
     return 0;
 }
